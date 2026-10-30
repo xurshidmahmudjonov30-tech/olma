@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UyBozor - O'zbekistonda uy toping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#0f7a4a', dark: '#0b5c38', light: '#e7f5ee' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-xl font-bold text-slate-900">Uy<span class="text-brand">Bozor</span></a>
+        <div class="hidden lg:flex items-center gap-1 text-sm text-slate-600">
+          <a href="#" class="px-3 py-2 rounded-lg bg-brand text-white font-medium">Sotib olish</a>
+          <a href="#" class="px-3 py-2 rounded-lg hover:bg-slate-100">Ijara</a>
+          <a href="#" class="px-3 py-2 rounded-lg hover:bg-slate-100">Yangi binolar</a>
+          <a href="#" class="px-3 py-2 rounded-lg hover:bg-slate-100">Tijorat mulki</a>
+          <a href="#" class="px-3 py-2 rounded-lg hover:bg-slate-100">Ipoteka kalkulyator</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center text-xs font-medium border border-slate-200 rounded-md overflow-hidden">
+          <button class="px-2 py-1 bg-slate-900 text-white">USD</button>
+          <button class="px-2 py-1 text-slate-500">UZS</button>
+        </div>
+        <button class="bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+          + E'lon berish
+        </button>
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-slate-300 to-slate-500"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative bg-gradient-to-b from-sky-200 via-sky-100 to-slate-50 pt-12 pb-40">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-block text-xs bg-white/70 text-slate-600 px-3 py-1 rounded-full mb-5">
+        ✦ O'zbekistonning tasdiqlangan uy-joy platformasi
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+        O'z orzuingizdagi uyni <span class="text-brand">O'zbekistonda</span> toping
+      </h1>
+      <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+        Toshkent va viloyatlarda 45 000 dan ortiq tasdiqlangan kvartiralar, kottedjlar va tijorat mulklari to'g'ridan-to'g'ri egalaridan.
+      </p>
+    </div>
+
+    <!-- SEARCH CARD -->
+    <div class="max-w-5xl mx-auto px-4 mt-10 absolute left-0 right-0 -bottom-24">
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-5">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+          <div class="flex bg-slate-100 rounded-lg p-1 text-sm">
+            <button class="px-4 py-1.5 rounded-md bg-brand text-white font-medium">Sotib olish</button>
+            <button class="px-4 py-1.5 rounded-md text-slate-600">Ijara</button>
+            <button class="px-4 py-1.5 rounded-md text-slate-600">Kunlik ijara</button>
+          </div>
+          <div class="text-xs text-slate-500">
+            Valyuta: <span class="font-semibold text-brand">1 USD = 12,600 UZS</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
+          <div class="md:col-span-3">
+            <label class="text-xs text-slate-500 block mb-1">Shahar va tuman</label>
+            <select class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40">
+              <option>Toshkent, barcha tumanlar</option>
+              <option>Chilonzor</option>
+              <option>Yunusobod</option>
+              <option>Mirzo Ulug'bek</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-3">
+            <label class="text-xs text-slate-500 block mb-1">Xonalar soni</label>
+            <div class="flex border border-slate-200 rounded-lg overflow-hidden text-sm">
+              <button class="flex-1 py-2.5 hover:bg-slate-50">1</button>
+              <button class="flex-1 py-2.5 bg-brand text-white font-medium">2</button>
+              <button class="flex-1 py-2.5 hover:bg-slate-50">3</button>
+              <button class="flex-1 py-2.5 hover:bg-slate-50">4+</button>
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="text-xs text-slate-500 block mb-1">Mulk turi</label>
+            <select class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40">
+              <option>Kvartira (ikki xonali)</option>
+              <option>Uy / Kottedj</option>
+              <option>Tijorat</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="text-xs text-slate-500 block mb-1">Narx (USD gacha)</label>
+            <input type="text" value="85,000" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40" />
+          </div>
+
+          <div class="md:col-span-2">
+            <button class="w-full bg-brand hover:bg-brand-dark text-white font-semibold py-2.5 rounded-lg flex items-center justify-center gap-2 transition">
+              🔍 Qidirish
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 mt-4 text-xs">
+          <span class="text-slate-500 mr-1">Tezkor filtr:</span>
+          <span class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 cursor-pointer">Metro yaqinida</span>
+          <span class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 cursor-pointer">Yevropa remont</span>
+          <span class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 cursor-pointer">Hovli uylar</span>
+          <span class="px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 cursor-pointer">Yangi bino (ipoteka)</span>
+          <span class="ml-auto px-3 py-1 rounded-full bg-brand-light text-brand font-medium cursor-pointer">Barcha filtrlar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="max-w-5xl mx-auto px-4 mt-32 relative z-10">
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100">
+      <div class="p-6">
+        <p class="text-xs text-slate-500 uppercase tracking-wide">📍 Jami e'lonlar</p>
+        <p class="text-3xl font-bold mt-2">45,000+</p>
+        <p class="text-xs text-slate-400 mt-1">Faol va tekshirilgan</p>
+      </div>
+      <div class="p-6">
+        <p class="text-xs text-slate-500 uppercase tracking-wide">👥 Faol sotuvchilar</p>
+        <p class="text-3xl font-bold mt-2">12,000+</p>
+        <p class="text-xs text-slate-400 mt-1">Shaxsiy va agentliklar</p>
+      </div>
+      <div class="p-6">
+        <p class="text-xs text-slate-500 uppercase tracking-wide">🛡 Savdolar</p>
+        <p class="text-3xl font-bold mt-2">98.4%</p>
+        <p class="text-xs text-slate-400 mt-1">Ijobiy bitimlar</p>
+      </div>
+      <div class="p-6">
+        <p class="text-xs text-slate-500 uppercase tracking-wide">🏆 Qamrov</p>
+        <p class="text-3xl font-bold mt-2">14 <span class="text-lg font-semibold">hudud</span></p>
+        <p class="text-xs text-slate-400 mt-1">Butun respublika bo'ylab</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED LISTINGS -->
+  <section class="max-w-7xl mx-auto px-4 mt-14 pb-16">
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <p class="text-xs font-semibold text-brand tracking-wider uppercase">Maxsus saralangan</p>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Tavsiya etilgan e'lonlar</h2>
+        <p class="text-sm text-slate-500 mt-1">Ekspertlarimiz tomonidan tekshirilgan va eng mashhur variantlar</p>
+      </div>
+      <a href="#" class="hidden sm:inline-flex text-sm text-brand font-medium border border-brand/30 px-4 py-2 rounded-lg hover:bg-brand-light">
+        Barcha e'lonlarni ko'rish →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Card 1 -->
+      <article class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition group">
+        <div class="relative h-44 bg-gradient-to-br from-amber-200 to-orange-300">
+          <span class="absolute top-3 left-3 text-[11px] bg-emerald-500 text-white px-2 py-0.5 rounded-md font-medium">Yangi</span>
+          <span class="absolute top-3 left-20 text-[11px] bg-amber-400 text-white px-2 py-0.5 rounded-md font-bold">VIP</span>
+          <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-slate-500">♡</button>
+          <span class="absolute bottom-3 left-3 text-[11px] bg-black/50 text-white px-2 py-0.5 rounded">📷 4 ta rasm</span>
+        </div>
+        <div class="p-4">
+          <div class="flex items-baseline gap-2">
+            <p class="text-lg font-bold">$85,000</p>
+            <p class="text-xs text-slate-400">≈ 1,070,000,000 UZS</p>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">$1,133 / m²</p>
+          <h3 class="font-semibold mt-2 text-slate-900">Mirzo Ulug'bek, 3 xonali novostroyka</h3>
+          <p class="text-xs text-slate-500 mt-1">📍 Mirzo Ulug'bek tumani, Buyuk ipak yo'li 10</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition group">
+        <div class="relative h-44 bg-gradient-to-br from-stone-300 to-stone-500">
+          <span class="absolute top-3 left-3 text-[11px] bg-sky-500 text-white px-2 py-0.5 rounded-md font-medium">Tavsiya</span>
+          <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-slate-500">♡</button>
+          <span class="absolute bottom-3 left-3 text-[11px] bg-black/50 text-white px-2 py-0.5 rounded">📷 Ko'p rasm</span>
+        </div>
+        <div class="p-4">
+          <div class="flex items-baseline gap-2">
+            <p class="text-lg font-bold">$65,000</p>
+            <p class="text-xs text-slate-400">≈ 820,000,000 UZS</p>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">$1,120 / m²</p>
+          <h3 class="font-semibold mt-2 text-slate-900">Yakkasaroy tumani, 2 xonali...</h3>
+          <p class="text-xs text-slate-500 mt-1">📍 Yakkasaroy tumani, Shota Rustaveli</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition group">
+        <div class="relative h-44 bg-gradient-to-br from-teal-200 to-emerald-400">
+          <span class="absolute top-3 left-3 text-[11px] bg-rose-500 text-white px-2 py-0.5 rounded-md font-medium">Kottej</span>
+          <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-slate-500">♡</button>
+          <span class="absolute bottom-3 left-3 text-[11px] bg-black/50 text-white px-2 py-0.5 rounded">📷 5 ta rasm</span>
+        </div>
+        <div class="p-4">
+          <div class="flex items-baseline gap-2">
+            <p class="text-lg font-bold">$140,000</p>
+            <p class="text-xs text-slate-400">≈ 1,770,000,000 UZS</p>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">$777 / m²</p>
+          <h3 class="font-semibold mt-2 text-slate-900">Yunusobod, 4 xonali kottej</h3>
+          <p class="text-xs text-slate-500 mt-1">📍 Yunusobod tumani, 15-mavze</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition group">
+        <div class="relative h-44 bg-gradient-to-br from-indigo-200 to-violet-400">
+          <span class="absolute top-3 left-3 text-[11px] bg-violet-500 text-white px-2 py-0.5 rounded-md font-medium">Yangi</span>
+          <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-slate-500">♡</button>
+          <span class="absolute bottom-3 left-3 text-[11px] bg-black/50 text-white px-2 py-0.5 rounded">📷 3 ta rasm</span>
+        </div>
+        <div class="p-4">
+          <div class="flex items-baseline gap-2">
+            <p class="text-lg font-bold">$42,000</p>
+            <p class="text-xs text-slate-400">≈ 529,000,000 UZS</p>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">$1,050 / m²</p>
+          <h3 class="font-semibold mt-2 text-slate-900">Chilonzor tumani, 1 xonali shinam</h3>
+          <p class="text-xs text-slate-500 mt-1">📍 Chilonzor tumani, Qatortol ko'chasi</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</body>
+</html>
